@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: poc-service
+  namespace: poc-namespace
+  labels:
+    app: poc-app
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-internal: "true"
+spec:
+  type: LoadBalancer
+  selector:
+    app: poc-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
