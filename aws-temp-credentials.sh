@@ -35,7 +35,7 @@ kubectl get nodes
 
 kubectl get pods
 
-kubectl apply -f deploy.yml
+kubectl apply -f deploy.yaml
 
 sleep 10
 
